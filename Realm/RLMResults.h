@@ -33,6 +33,8 @@
 
 @interface RLMResults : NSObject<RLMCollection, NSFastEnumeration>
 
+- (void)deliverOnQueue:(dispatch_queue_t)queue block:(void (^)(RLMResults *))block;
+
 /**---------------------------------------------------------------------------------------
  *  @name RLMResults Properties
  *  ---------------------------------------------------------------------------------------
