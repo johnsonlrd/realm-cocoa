@@ -19,6 +19,18 @@
 #import <Foundation/Foundation.h>
 #import <Realm/RLMConstants.h>
 
+@protocol RLMInt
+@end
+@protocol RLMBool
+@end
+@protocol RLMDouble
+@end
+@protocol RLMFloat
+@end
+
+@interface NSNumber ()<RLMInt, RLMBool, RLMDouble, RLMFloat>
+@end
+
 /**
  This class models properties persisted to Realm in an RLMObjectSchema.
  
